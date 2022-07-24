@@ -1,0 +1,46 @@
+<!--자유게시판 글 작성하는 페이지-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- 반응협웹표준 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 스타일시트참조 -->
+        <link rel="stylesheet" href="../project_css/boardWrite.css">
+        <!-- css 파일은 각자 생성해서 href에 링크 넣어주세요 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../project_js/boardWrite.js"></script>
+        <!-- js파일명은 각자 수정해주세요 -->
+    </head>
+    <style>
+    	div.all{
+    		width:800px;
+    		margin:auto;
+    	}
+    	textarea.boardText{
+    		width:700px;
+    		height:600px;
+    	}
+    	.title{
+    		width:650px;
+    		margin:auto;
+			text-align:center;
+    	}
+    </style>
+    <body>
+    	<div class="all">
+    		<h1 class="title">자유게시판 작성</h1>
+     	 	<span>제목:</span><input type="text" id="title" class="title" placeholder="제목을 입력하세요"><br>
+      		<textarea class="boardText" placeholder="내용을 입력하세요"></textarea><br>
+            <div class="form">
+            	<label>사진파일 첨부
+      				<input type="file" name="foodFile" accept="image/*"><br>
+      			</label>
+                <form method="post" action="/recruit_project_final/upload" enctype="multipart/form-data">
+                    <input type="button" class="ajax" value="AJAX 파일업로드">
+                </form>
+            </div>
+      		<button class="cancle">취소하기</button><button type="submit" class="complete">작성완료</button>
+        </div>
+    </body>
+</html>

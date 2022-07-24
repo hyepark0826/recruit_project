@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../project_js/noticeWrite.js"></script>
+    </head>
+    <style>
+    	div.all{
+    		width:800px;
+    		margin:auto;
+    	}
+    	textarea.noticeText{
+    		width:700px;
+    		height:600px;
+    	}
+    	.title{
+    		width:650px;
+    		margin:auto;
+			text-align:center;
+    	}
+    </style>
+    <body>
+    	<div class="all">
+    		<h1 class="title">공지사항 작성</h1>
+     	 	<span>제목:</span><input type="text" id="title" class="title" placeholder="제목을 입력하세요"><br>
+      		<textarea class="noticeText" placeholder="내용을 입력하세요"></textarea><br>
+      		<button class="cancle">취소하기</button><button type="submit" class="complete">작성완료</button>
+    	</div>
+    </body>
+</html>

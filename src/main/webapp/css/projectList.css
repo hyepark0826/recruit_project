@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.project_wrap{
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.project_title strong{
+    font-SIZE: 2rem;
+}
+
+.project_title p{
+    margin-top: 5px;
+    font-size:1rem;
+}
+
+.project_wrap{
+    margin-top: 30px;
+    font-size:0px;
+    text-align: center;
+}
+
+.project_wrap a{
+    display: inline-block;
+    min-width: 80px;
+    margin-left:10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-size:1rem;
+}
+
+.project_wrap a:first-child{
+    margin-left:0;
+}
+
+.project_wrap a.on{
+    background-color: #000;
+    color: #fff;
+}
+.project_list{
+    width:100%;
+    border-top: 2px solid #000;
+}
+.project_list>div{
+    border-bottom:1px solid #999;
+    font-size: 0px;
+}
+.project_list > div.top{
+    border-bottom:1px solid #999;
+}
+.project_list > div:last-child{
+    border-bottom:1px solid #000;
+}
+.project_list > div > div{
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+.project_list > div.top > div{
+    font-weight: 600;
+}
+.project_list .boardnum{
+    width: 10%;
+}
+.project_list .top .boardtitle{
+    text-align: center;
+}
+
+.project_list .boardtitle{
+    width: 50%;
+    text-align: left;
+}
+.project_list .boardWriter{
+    width: 10%;
+}
+.project_list .date{
+    width: 10%;
+}.project_list .count{
+    width: 10%;
+}

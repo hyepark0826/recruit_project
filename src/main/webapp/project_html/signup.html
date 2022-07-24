@@ -1,0 +1,60 @@
+<!-- 회원가입 페이지 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>signup page</title>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../project_js/signup.js"></script>
+
+</head>
+<style>
+	div.all{
+		width:500px;
+		margin:auto;
+	}
+	.name{
+	    width:400px;
+	}
+	.id{
+		width:285px;
+	}
+	.pwd{
+		width:400px;
+	}
+	.pwdChk{
+		width:400px;
+	}
+	.email{
+	    width:285px;
+	}
+
+</style>
+<body>
+        <div class="all">
+     	<h1>회원가입</h1>
+     	<form id="number" method="post" action="http://localhost:8888/recruit_project_final/signup" autocomplete="off">
+     		<div>이름</div>
+     			<input type="text" name="name" class="name"placeholder="이름을 입력해주세요"><br>
+     		<div>아이디</div>
+     			<input type="text" name="id" class="id" placeholder="아이디를 입력해주세요">
+
+     		<button type="button" class="idchk">아이디중복확인</button>
+     		<div>비밀번호</div>
+     			<input type="password" name="pwd" placeholder="비밀번호를 입력해주세요"><span>비밀번호 조건 : </span><br>
+     			<input type="password" name="pwdChk" placeholder="비밀번호 확인"><span>영문+숫자+특수문자 포함 10자리 이상</span><br>
+     		    
+     		<div>이메일</div>
+     		<input type="email" name="email" class="email" placeholder="이메일을 입력하세요">
+     		<button type="button" class="emailchk">이메일중복확인</button><br>
+     		<input type="checkbox" required>만 14세 이상입니다(필수)<br>
+     		<input type="checkbox" required>서비스이용약관에 동의합니다
+     		<a href="serviceUse.html" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">필수</a><br>
+     		<input type="checkbox" required>개인정보 수집/이용에 동의합니다
+     		<a href="personalInfoTbl.html" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">필수</a><br>
+     		<button type="submit">가입하기</button>
+     	</form>
+     </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../project_js/resumeWrite.js"></script>
+</head>
+<style>
+
+   div.all{
+
+      border:1px solid;
+
+      width:800px;
+
+      margin:auto;
+
+      
+
+   }
+
+   h2{
+
+      text-align: center;
+
+   }
+
+   div button.addsaveBtn{
+
+        margin-left:350px;
+
+   }
+
+   div button.endsaveBtn{
+
+      float:right;
+
+   }
+
+</style>
+
+<body>
+
+       <header>
+
+            <nav>
+
+                 <a href="./projectList.html">모집보기</a><!--모집글 보는 리스트로 이동-->
+
+                <a href="./projectWrite2.html">모집하기</a><!--모집글 작성하는 페이지로 이동-->
+
+ 
+
+              <!--  <span id="flip">notice</span>클릭시 공지사항 자유게시판이 나옴-->
+                <a href="./noticeList.html">notice</a><!--클릭시 공지사항 자유게시판이 나옴-->
+
+                <a href="./boardList.html" style="display:none;">자유게시판</div>
+
+                <a href="./noticeList.html" style="display:none;">공지사항</div>
+
+                    
+
+                <a href="" style="display:none;">공지</a><!--로그인시에만 보이고 글쓴이가 댓글이 올때 알람이 오게끔-->
+
+                <a href="./myInfoView.html" style="display:none;">마이페이지</a><!--로그인시에만 보임-->
+
+                <a href="./login.html">로그인</a><!--로그인 시에는 로그아웃으로 바뀜-->
+
+            </nav>
+
+        </header>
+
+   
+
+      <div class="all">
+
+         <h2>자기소개서</h2>
+
+         <span>제목:</span><input type="text" class="title" placeholder="제목을 입력하세요"><br>
+
+         <span>나이:</span><input type="text" class="age" placeholder="나이를 입력하세요"><br>
+
+         <span>전공:</span><input type="text" class="major"placeholder="전공를 입력하세요"><br>
+
+         <span>자기소개:</span><textarea class="introduce" placeholder="자기소개 입력하세요"></textarea><br>
+
+         <button class="addsaveBtn">저장</button>
+
+      </div>
+
+            
+
+        <footer><!--회사정보가 나올곳 ex) copyright-->
+
+            <aside>
+
+                <a href="personalInfoTbl.html">개인정보처리방침</a><br>
+
+                <ul class="copy_menu">
+
+                    <li>사업자등록번호 : XXXX</li>
+
+                    <li>(주)사람모집</li>
+
+                    <li>TEL : 1522-1234</li>
+
+                    <li><address>test@kosta.com</address></li>
+
+                </ul>
+
+                <span class="en">ⓒ 2022 saram mozip Company. All Rights Reserved.</span>
+
+            </aside>
+
+        </footer>
+
+</body>
+
+</html>

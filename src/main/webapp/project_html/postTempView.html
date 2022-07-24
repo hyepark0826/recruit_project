@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<!-- 테마 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<!-- 자바스크립트 -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<!-- alert style library  -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	</head>
+	<body class="sb-nav-fixed">
+		<main class="mt-5 pt-5">
+		<div class="container-fluid px-4">
+			<h1 class="mt-4">임시저장글 상세보기</h1>
+			<div class="card mb-4">
+				<div class="card-body">
+					<form id="frm" name="frm">
+						<div class="mb-3 mt-3">
+							<label for="bno" class="form-label">게시판 번호</label> <input type="text" class="form-control" id="ptempNo" name="ptempNo" value="" readOnly>
+						</div>
+						<div class="mb-3">
+							<label for="writer" class="form-label">작성자</label> <input type="text" class="form-control" id="userNo" name="userNo" value="" readOnly>
+						</div>
+							<div class="mb-5">
+							<label for="writer" class="form-label">카테고리</label><br/>
+							<div class="col-sm-3">
+							<select class="form-control" name="pCate1" id="pCate1" >
+				                <option>지역을 선택하세요</option>
+				                <option value="101">서울특별시</option>
+				                <option value="102">경기도</option>
+				                <option value="103">인천광역시</option>
+				                <option value="104">강원도</option>
+				                <option value="105">충청도</option>
+				                <option value="106">세종특별자치시</option>
+				                <option value="107">대전광역시</option>
+				                <option value="108">경상도</option>
+				                <option value="109">대구광역시</option>
+				                <option value="110">울산광역시</option>
+				                <option value="111">전라도</option>
+				                <option value="112">광주광역시</option>
+				                <option value="113">부산광역시</option>
+				                <option value="114">제주특별자치도</option>
+	    					</select>
+	    					</div>
+							<div class="col-sm-3">
+					            <select class="form-control" name="pCate2" id="pCate2" >
+					                <option>경력을 선택하세요</option>
+					                <option value="201">2년 미만</option>
+					                <option value="202">5년 미만</option>
+					                <option value="203">10년 미만 </option>
+					                <option value="204">경력 무관 </option>
+					            </select>
+				            </div>
+							<div class="col-sm-3">
+			             		<select class="form-control"  name="pCate3" id="pCate3" >
+	                				<option value="">분야를 선택하세요</option>
+					                <option value="301">논문/리서치/연구/개발</option>
+					                <option value="302">취업/창업 </option>
+					                <option value="303">영상/사진</option>
+					                <option value="304">웹/모바일/IT</option>
+					                <option value="305">경영/기획/컨설팅</option>
+					                <option value="306">디자인/홍보</option>
+					                <option value="307">교육/봉사 </option>
+									<option value="308">전공 무관 </option>
+					             </select>
+				             </div>
+						<div>
+						<br/>
+						<br/>
+						<div class="mb-3">
+							<label for="title" class="form-label">제목</label> <input type="text" class="form-control" id="ptempTitle" name="ptempTitle" value="" readOnly>
+						</div>
+						<div class="mb-3">
+							<label for="content" class="form-label">내용</label>
+							<textarea class="form-control" id="ptempContent" name="ptempContent" readOnly></textarea>
+						<div class="mb-3">
+							<label for="deadlineDay" class="form-label">마감일자</label> 
+							<br/>
+							<input type="date" id="deadlineDay"	name="deadlineDay">
+						</div>
+						<div class="custom-file">
+							<label class="form-label" for="customFile">파일등록</label>
+							<input type="file" class="form-control" id="customFile" />
+						</div>
+						
+						<a href="../project_html/myPagePostList.html" class="btn btn-outline-secondary">목록으로</a> 
+						<a href="#" class="btn btn-outline-warning" id="btnUpt">수정하기</a>
+						<a href="#" class="btn btn-outline-danger" id="btnDel">삭제하기</a>
+						<a href="#" class="btn btn-outline-warning" id="btnSave">글올리기</a>						
+					</form>
+				</div>
+			</div>
+		</div>
+		</main>
+		<script src="../project_js/hye.js"></script>	<!-- ajax공통 스크립트 임포트 -->
+		<script src="../project_js/postTempView.js"></script>	<!-- 페이지에서 사용하는 스크립ㅌ즈 임포트 -->
+	</body>
+</html>

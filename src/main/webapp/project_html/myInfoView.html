@@ -1,0 +1,49 @@
+<!-- 마이페이지 안의 자기가 쓴 임시저장된 모잡글과 모집글 1개 클릭시 상세하게 보여주기-->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- 반응협웹표준 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 스타일시트참조 -->
+        <link rel="stylesheet" href="project_css/myPageView.css">
+        <!-- css 파일은 각자 생성해서 href에 링크 넣어주세요 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="#.js"></script>
+        <!-- js파일명은 각자 수정해주세요 -->
+    </head>
+    
+    <style>
+    	*{
+    		margin:auto;
+    		margin:50px;
+    		background-color:white;
+    		text-align:center;
+    		color:black;
+    		font-size:30px;
+    	}
+    	button{
+    		background-color:snow;
+    	}
+    </style>
+    
+    
+    <body>
+    	<h1>마이페이지</h1>
+    	<div>
+    		<a href="./myInfoView.html">내정보</a>
+    	</div>
+    	<div>
+    		<a href="./myPagePostList.html">작성한 글보기</a>
+    	</div>
+    	<div>
+    		<a href="./resumeWrite.html">자기소개서 작성</a>
+			<a href="./resumeList.html">자기소개서 보기</a>
+    	</div>
+		<div>
+			<button class="addsaveBtn" onclick="location=''">회원탈퇴</button>
+			<button class="addsaveBtn" onclick="location='pwdUpdate.html'">비밀번호변경</button>
+			
+		</div>	
+    </body>
+</html>

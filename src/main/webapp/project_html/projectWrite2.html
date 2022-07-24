@@ -1,0 +1,130 @@
+ <!--모집글 작성페이지-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- 반응협웹표준 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 스타일시트참조 -->
+        <link rel="stylesheet" href="#.css">
+        <!-- css 파일은 각자 생성해서 href에 링크 넣어주세요 -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/lib/jquery/3.6.0/jquery.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <!-- <script src="../js/projectWrite.js"></script> -->
+        <!-- js파일명은 각자 수정해주세요 -->
+        
+    </head>
+    <script>
+    /* 입력 체크하는 함수 */
+    function inputCheck(){
+    	 /* if(document.getElementsByClassName("location")[0].value==""){
+             alert("카테고리를 선택해주세요");
+             return false;
+         } 지역을 선택하세요가 선택되어있어서? 의미가 없음 
+    	 */
+        if(document.getElementsByName("p_title")[0].value==""){
+            alert("제목을 입력하세요");
+            return false;
+        }
+        if(document.getElementsByName("p_content")[0].value==""){
+            alert("내용을 입력하세요");
+            return false;
+        }
+        if(document.getElementsByName("deadlineDay")[0].value==""){
+            alert("마감일자를 입력하세요");
+            return false;
+        }
+        
+    }
+     function submit2(frm){
+       frm.action="http://localhost:8888/recruit_project_final/tempprojectwrite";
+       frm.submit();
+       return true;
+       }
+    </script>
+    <body>
+        <form method="post" accept-charset="UTF-8" action="http://localhost:8888/recruit_project_final/projectwrite2">
+            <!-- action="http://localhost:8888/back/projectview -->
+            <div class="cateSelect">
+                <div class="catetitle">
+                    <label>카테고리 선택</label>
+                </div>
+           
+            <select name="location" id="location-select" >
+                <option>지역을 선택하세요</option>
+                <option>101 서울특별시</option>
+                <option>102 경기도</option>
+                <option>103 인천광역시</option>
+                <option>104 강원도</option>
+                <option>105 충청도</option>
+                <option>106 세종특별자치시</option>
+                <option>107 대전광역시</option>
+                <option>108 경상도</option>
+                <option>109 대구광역시</option>
+                <option>110 울산광역시</option>
+                <option>111 전라도</option>
+                <option>112 광주광역시</option>
+                <option>113 부산광역시</option>
+                <option>114 제주특별자치도</option>
+                <option>115 지역무관</option>
+                
+               
+            </select>
+            <select name="career">
+                <option>경력을 선택하세요</option>
+                <option>201 2년 미만</option>
+                <option>202 5년 미만</option>
+                <option>203 10년 미만 </option>
+                <option>204 경력 무관 </option>
+          
+            </select>
+            
+             <select name="field">
+                <option>분야를 선택하세요</option>
+                <option>301 논문/리서치/연구/개발</option>
+                <option>302 취업/창업 </option>
+                <option>303 영상/사진</option>
+                <option>304 웹/모바일/IT</option>
+                <option>305 경영/기획/컨설팅</option>
+                <option>306 디자인/홍보</option>
+                <option>307 교육/봉사 </option>
+				<option>308 전공 무관 </option>
+
+             </select>
+                <!-- <input type="submit" value="검색"> -->
+            
+         
+        </div>
+        <!-- <div class="keyboard">
+            <input type="text">
+        </div> -->
+        
+        <!-- <div class="submit">
+            <form method="get" action="http://www.naver.com">
+                <input type="text" name="t" value="test"><br>
+                <button>전송</button>
+            </form>
+        </div> -->
+		<!-- 데이터 입력필드 -->
+        <div class="wrap_content">
+            <input type="text" class="form-control" placeholder="제목을 입력해주세요."  name="p_title" maxlength="50" size="100">
+            <textarea type="text" class="form-control" placeholder="내용을 입력해주세요." name="p_content" maxlength="2048" style="height:350px" cols="103"></textarea>
+        </div>
+        <fieldset>
+            <div>마감일자</div>
+            <input type="date" name = "deadlineDay">
+        </fieldset>
+        <!-- 파일 입력받기 -->
+        <fieldset>
+            <div>파일추가</div>
+			<input type="file">
+		</fieldset>
+    
+        <fieldset>
+            <a href="http://localhost:8888/recruit_project_final/project_html/projectList.html" >취소</a>
+            <input type="button" name="tmp_save" value="임시저장" onclick="return submit2(this.form);">
+		    <input type="submit" name="save" value="저장" onclick="return inputCheck(); location.href='http://localhost:8888/recruit_project_final/project_html/projectList.html'">
+        </fieldset>
+        </form>
+    </body>
+</html>

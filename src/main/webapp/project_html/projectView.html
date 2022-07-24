@@ -1,0 +1,129 @@
+<!-- 모집글 보기에서 프로젝트 상세 페이지--><!--모집글 작성페이지-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- 반응협웹표준 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 스타일시트참조 -->
+        <link rel="stylesheet" href="../css/projectView.css">
+        <!-- css 파일은 각자 생성해서 href에 링크 넣어주세요 -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/lib/jquery/3.6.0/jquery.min.js"></script> -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+         <script src="../project_js/projectView.js"></script>
+        
+        <!-- js파일명은 각자 수정해주세요 -->
+        <title>모집글 보기</title>
+    </head>
+    
+   <body>
+      <div class="projectView_Wrap">
+      	<div class="projectView_Title">
+                <Strong>모집글 상세페이지</Strong>
+                <p>모집글 페이지입니다.</p>
+          </div>
+         <!--모집글 상세보기말고 모집글 제목이 보여지게 해야될것같음 -->
+         <div class="projectView">
+            <form method="get" action="" id=projectView >
+                <div class="projectView_pno">
+                   <label for="p_no" class="form-label">글번호</label> 
+                   <input type="text" class="form-control"  name="p_no" value=""
+                   disabled>
+                  </div>
+                  
+                  <div class="projectView_writer">
+                     <label for="title" class="form-label">글쓴이</label> 
+                     <input type="text" class="form-control" id="user_no" name="user_no" 
+                        value="" disabled size="100">
+                  </div>
+                  <div class="projectView_title">
+                     <label for="title" class="form-label">제목</label> 
+                     <input type="text" class="form-control"  name="p_title" 
+                        value="" disabled size="100">
+                  </div>
+                  <div class="projectView_content">
+                     <label for="content" class="form-label">내용</label>
+                     <textarea class="form-control" id="p_content" name="p_content"
+                        disabled style="height:350px" cols="103" ></textarea>
+                  </div>
+                  <div class="projectView_deadlineDay">
+                     <label for="regDate" class="form-label">마감일</label> 
+                     <input  type="text" class="form-control" id="deadlineDay" name="deadlineDay" 
+                        value="" disabled>
+                  </div>
+                  <div class="projectView_view">
+                     <label for="views" class="form-label">조회수</label> 
+                     <input type="text" class="form-control" id="p_view" name="p_view" 
+                        value="" disabled>
+                  </div>
+                  <div class="projectView-send">
+                     <!--<input type="submit" value="제출하기">-->
+                     <a href="resumeList.html">제출하기</a>
+                  </div>
+                
+                  <!-- 글쓴이한테만 보여아함 -->
+                  <a href="projectList.html" class="btn btn-outline-secondary">목록으로</a> 
+                 
+                  <input type=button value="수정하기" name="projectupdateview" >
+                 
+                  <!-- onclick= "location.href='projectUpdate.html'" -->
+                   <!-- <input type=submit value="삭제하기" onclick="return deleteCheck();"> -->
+                  
+                  <!-- onclick="submitproject('updateView');" -->
+                  <!-- <input type="submit" name="delete_ck" value="삭제하기""> -->
+                  <!-- return true 면 projectList.html로 이동, 취소하면 그대로 유지 -->
+                 
+               </form>
+      </div>
+      
+     
+  <div id="form-commentInfo">
+            <div id="comment-count">댓글 <span id="count">0</span></div>
+            <input id="comment-input" placeholder="댓글을 입력해 주세요.">
+            <button id="submit">등록</button>
+        </div>
+        <div id=comments>
+    
+        </div>
+        <script src="../project_js/projectComment.js"></script>
+
+    </div>
+
+         
+   <script>
+   
+  
+    	
+   function deleteCheck(){
+    		if(!confirm('삭제하시겠습니가?')){
+    			return false;
+    		}
+    		else{
+    			projectDelete();
+    			location.href='projectList.html'; 
+    			submitproject('delete');
+    			return true;
+    		}
+    	};
+    	function projectDelete(){
+    		submitproject('delete');
+    		alert("삭제되었습니다.");
+    		
+    	};
+     	function submitproject(mode){
+    		if(mode=='delete'){
+    			projectView.action=	"http://localhost:8888/recruit_project_final/projectdelete";
+    		}
+    		else if(mode=='updateView'){
+    			alert(mode);
+    			projectView.action=	"http://localhost:8888/recruit_project_final/projectupdate";
+    		}
+    		return true;
+    	}; 
+    </script>
+   </body>
+
+</html>
+

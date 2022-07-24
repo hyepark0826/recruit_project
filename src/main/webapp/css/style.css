@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.board_wrap{
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.board_title strong{
+    font-SIZE: 2rem;
+}
+
+.board_title p{
+    margin-top: 5px;
+    font-size:1rem;
+}
+
+.bt_wrap{
+    margin-top: 30px;
+    font-size:0px;
+    text-align: center;
+}
+
+.bt_wrap a{
+    display: inline-block;
+    min-width: 80px;
+    margin-left:10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-size:1rem;
+}
+
+.bt_wrap a:first-child{
+    margin-left:0;
+}
+
+.bt_wrap a.on{
+    background-color: #000;
+    color: #fff;
+}
+.board_list{
+    width:100%;
+    border-top: 2px solid #000;
+}
+.board_list>div{
+    border-bottom:1px solid #999;
+    font-size: 0px;
+}
+.board_list > div.top{
+    border-bottom:1px solid #999;
+}
+.board_list > div:last-child{
+    border-bottom:1px solid #000;
+}
+.board_list > div > div{
+    display:inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+.board_list > div.top > div{
+    font-weight: 600;
+}
+.board_list .boardnum{
+    width: 10%;
+}
+.board_list .top .boardtitle{
+    text-align: center;
+}
+
+.board_list .boardtitle{
+    width: 50%;
+    text-align: left;
+}
+.board_list .boardWriter{
+    width: 10%;
+}
+.board_list .date{
+    width: 10%;
+}.board_list .count{
+    width: 10%;
+}

@@ -1,0 +1,115 @@
+<!-- 작성글 수정페이지-->
+<!-- 모집글 보기에서 프로젝트 상세 페이지--><!--모집글 작성페이지-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- 반응협웹표준 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 스타일시트참조 -->
+<!--         <link rel="stylesheet" href="../css/projectUpdate.css"> -->
+        <!-- css 파일은 각자 생성해서 href에 링크 넣어주세요 -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/lib/jquery/3.6.0/jquery.min.js"></script> -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+         <script src="../project_js/projectUpdate.js"></script>
+        
+        <!-- datepicker -->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	        
+        <!-- js파일명은 각자 수정해주세요 -->
+        <title>모집글 수정</title>
+    </head>
+    <script>
+      $(function(){
+         $('#datepicker').datepicker({dateFormat: 'yy/mm/dd'});
+         $.datepicker.setDefaults($.datepicker.regional['ko']); //datepicker 한국어로 사용하기 위한 언어설정
+      })
+	</script>
+   <body>
+      <div class="projectView_Wrap">
+      	<div class="projectView_Title">
+                <Strong>모집글 수정페이지</Strong>
+                <p>모집글 수정페이지입니다.</p>
+          </div>
+         <!--모집글 상세보기말고 모집글 제목이 보여지게 해야될것같음 -->
+         <div class="projectUpdate">
+            <form method="get" action="http://localhost:8888/recruit_project_final/projectupdate" id="projectupdate" >
+                <div class="projectUpdate_pno">
+                   <label for="p_no" class="form-label">글번호</label> 
+                   <input type="text" class="form-control"  name="p_no" value=""
+                   disabled>
+                  </div>
+                  
+                  <div class="projectUpdate_writer">
+                     <label for="title" class="form-label">글쓴이</label> 
+                     <input type="text" class="form-control" id="user_no" name="user_no" 
+                        value="" disabled size="100">
+                  </div>
+                  <div class="projectUpdate_title">
+                     <label for="title" class="form-label">제목</label> 
+                     <input type="text" class="form-control"  name="p_title" 
+                        value="" size="100">
+                  </div>
+                  <div class="projectUpdate_content">
+                     <label for="content" class="form-label">내용</label>
+                     <textarea class="form-control" id="p_content" name="p_content"
+                        style="height:350px" cols="103" ></textarea>
+                  </div>
+                  <div class="projectUpdate_deadlineDay">
+                     <label for="regDate" class="form-label">마감일</label> 
+                     <input  type="text"  id="datepicker" name="deadlineDay" 
+                        value="">
+                
+                  </div>
+                  <div class="projectUpdate_view">
+                     <label for="views" class="form-label">조회수</label> 
+                     <input type="text" disabled class="form-control" id="p_view" name="p_view" 
+                        value="" >
+                  </div>
+                  <div class="projectupdate-send">
+                     <input type="submit" value="제출하기">
+                  </div>
+                
+                  <!-- 글쓴이한테만 보여아함 , 날짜지나면 안보여야함 -->
+                  <a href="projectList.html" class="btn btn-outline-secondary">취소하기</a> 
+                  <!-- <input type=button value="수정하기" onclick="submitproject('update');"> -->
+                  <input type=button value="수정완료" name="projectupdate" >
+                 <!--  onclick= "submitproject('save');" -->
+                  <input type=button value="삭제하기" name="delete" onclick="return deleteCheck();">
+                  
+                  
+                  <!-- <input type="submit" name="delete_ck" value="삭제하기""> -->
+                  <!-- return true 면 projectList.html로 이동, 취소하면 그대로 유지 -->
+               </form>
+      </div>
+     
+       <!--  <script src="projectView.js"></script> -->   <!-- 페이지에서 사용하는 스크립즈 임포트 -->
+      
+  <script>
+ 	/*  	function locationPath() {
+
+	    	var addr = 'http://localhost:8888/project1/html/projectUpdate.html?p_no=';
+	    	var txt = document.getElementById("p_no").value;
+			alert(addr, txt);
+	   		return addr.concat(txt);
+	  		} */
+    	function deleteCheck(){
+    		if(!confirm('삭제하시겠습니까?')){
+    			return false;
+    		}
+    		else{
+    			alert("삭제되었습니다.");
+    			return true;
+    		}
+    	};
+    	
+    </script>
+   </body>
+
+
+</html>
+
