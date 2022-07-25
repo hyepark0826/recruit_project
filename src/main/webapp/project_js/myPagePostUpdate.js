@@ -68,5 +68,6 @@ let updateCallBack = function(data){
 
 
 //수정 후 모집글로 이동 url 추가해야해 
+//
 
 
